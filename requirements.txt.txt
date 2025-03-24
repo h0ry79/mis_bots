@@ -1,0 +1,8 @@
+python-binance
+websockets
+rich
+aiohttp
+psutil
+python-telegram-bot
+tenacity
+colorama
