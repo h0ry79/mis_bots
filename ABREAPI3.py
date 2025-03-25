@@ -23,19 +23,6 @@ from rich.layout import Layout
 from rich.panel import Panel
 from rich.console import Console
 from rich import box
-import http.server
-import socketserver
-import threading
-
-# Iniciar un servidor HTTP simple en el puerto 8000
-def start_health_check_server():
-    handler = http.server.SimpleHTTPRequestHandler
-    httpd = socketserver.TCPServer(("", 8000), handler)
-    print("Health check server running on port 8000")
-    httpd.serve_forever()
-
-# Iniciar el servidor en un hilo separado
-threading.Thread(target=start_health_check_server, daemon=True).start()
 
 console = Console()
 logging.basicConfig(
