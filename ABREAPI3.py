@@ -590,7 +590,7 @@ async def main():
     console.print(f"""
 [bold cyan]╔══════════════════════════════════════════════╗
 ║      Bot de Señales Binance Futures          ║
-║     SMA RSI 7 - 40/60 || EMAs 5/10 - 1m     ║
+║     SMA RSI 14 - 45/55 || EMAs 7/21 - 1m     ║
 ║           Version: {CONFIG['VERSION']}                   ║ 
 ║    Última Actualización: {CONFIG['LAST_UPDATE']}          ║ 
 ║            Autor: {CONFIG['AUTHOR']}                     ║ 
