@@ -61,7 +61,7 @@ CONFIG = {
     'FEE_RATE_MAKER': 0.0002,                # Tasa de comisión para órdenes tipo maker
     'TAKE_PROFIT_LEVELS': [0.4, 0.4, 0.2],   # PORCENTAJE DE CIERRE EN CADA TAKE PROFIT
     'TP_MULTIPLIERS': [4.0, 7.0, 9.0],       # DISTANCIA ENTRE PRECIO ENTRADA Y TAKE PROFITS
-    'SL_ATR_MULTIPLIER': 2.0,                # DISTANCIA ENTRE PRECIO ENTRADA Y STOP LOSS INICIAL
+    'SL_ATR_MULTIPLIER': 1.5,                # DISTANCIA ENTRE PRECIO ENTRADA Y STOP LOSS INICIAL
     'ATR_PERIOD_LONG': 14,                   # Período para calcular ATR largo
     'ATR_PERIOD_SHORT': 7,                   # Período para calcular ATR corto
     'STOP_LOSS_FLUCTUATION_MARGIN': 0.0020,  # Margen adicional para el stop loss

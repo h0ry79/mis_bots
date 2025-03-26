@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
 Bot de Señales de Entrada para Binance Futures
-Versión 1.26.14: Control de posiciones únicas, EMAs, RSI SMA, órdenes automáticas 75x 30 ADA, verificación de tendencia.
-Última actualización: 2025-03-23
+Versión 1.26.14: Control de posiciones únicas, EMAs, RSI SMA, órdenes automáticas con verificación de tendencia.
+Última actualización: 2025-03-26
 Autor: h0ry79
 """
 
@@ -38,14 +38,14 @@ CONFIG = {
     'SYMBOL': 'API3USDT',                            # Símbolo del par de trading en Binance Futures (ej. LAYER/USDT)
     'LEVERAGE': 25,                                   # Nivel de apalancamiento para las órdenes de futuros
     'QUANTITY': 10,                                    # Cantidad de contratos/unidades por orden
-    'EMA_SHORT_PERIOD': 5,                            # Período de la EMA corta para cálculos (7 velas)
-    'EMA_LONG_PERIOD': 10,                            # Período de la EMA larga para cálculos (21 velas)
+    'EMA_SHORT_PERIOD': 7,                            # Período de la EMA corta para cálculos (7 velas)
+    'EMA_LONG_PERIOD': 21,                            # Período de la EMA larga para cálculos (21 velas)
     'DELAY_MINUTES': 2,                               # Retraso en minutos para verificar cruces de EMAs
-    'DISTANCE_THRESHOLD': 0.00033,                    # Umbral mínimo de distancia entre EMAs para confirmar señales
-    'RSI_PERIOD': 7,                                 # Período del RSI base para cálculos (14 velas)
-    'RSI_SMA_PERIOD': 7,                             # Período de la SMA aplicada al RSI (14 valores)
-    'RSI_SMA_OVERBOUGHT': 60,                         # Umbral superior del RSI SMA para señal de sobrecompra
-    'RSI_SMA_OVERSOLD': 40,                           # Umbral inferior del RSI SMA para señal de sobreventa
+    'DISTANCE_THRESHOLD': 0.0005,                     # Umbral mínimo de distancia entre EMAs para confirmar señales
+    'RSI_PERIOD': 14,                                 # Período del RSI base para cálculos (14 velas)
+    'RSI_SMA_PERIOD': 14,                             # Período de la SMA aplicada al RSI (14 valores)
+    'RSI_SMA_OVERBOUGHT': 55,                         # Umbral superior del RSI SMA para señal de sobrecompra
+    'RSI_SMA_OVERSOLD': 45,                           # Umbral inferior del RSI SMA para señal de sobreventa
     'UPDATE_INTERVAL': 10.0,                          # Intervalo en segundos para actualizar el balance
     'UI_UPDATE_INTERVAL': 0.2,                        # Intervalo en segundos para refrescar la interfaz de usuario
     'RECV_WINDOW': 15000,                             # Ventana de recepción en milisegundos para solicitudes API
@@ -57,7 +57,7 @@ CONFIG = {
     'WEBSOCKET_URL': 'wss://fstream.binance.com/ws',  # URL del WebSocket para datos en tiempo real de Binance Futures
     'TESTNET': False,                                 # Activa/desactiva el modo testnet (False para producción real)
     'VERSION': '1.26.13',                             # Versión actual del bot
-    'LAST_UPDATE': '2025-03-22',                      # Fecha de la última actualización del código
+    'LAST_UPDATE': '2025-03-26',                      # Fecha de la última actualización del código
     'AUTHOR': 'h0ry79'                                # Autor del bot
 }
 
